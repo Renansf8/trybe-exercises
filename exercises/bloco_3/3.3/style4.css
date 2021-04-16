@@ -1,0 +1,30 @@
+div:hover {
+    border: 2px solid #555555;
+}
+
+div:nth-child(3) {
+    color: red;
+}
+
+div:nth-child(4) {
+    color: orange;
+}
+
+div:nth-child(5) {
+    color: purple;
+    height: 48px;
+    font-size: 32px;
+}
+
+div:nth-child(6) {
+    color: black;
+}
+
+div:nth-child(7) {
+    color: burlywood;
+}
+
+div:nth-child(2n+1) {
+    font-style: italic;
+}
+

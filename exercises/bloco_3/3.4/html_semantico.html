@@ -1,21 +1,250 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stomatopoda</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      background-color: #a7a6a6;
+    }
+
+    .main {
+      display: flex;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #fff;
+      padding: 4px;
+      font-size: 18px;
+      border-bottom: 1px solid #6d6e6e;
+    }
+
+    .navbar ul {
+      margin-left: 400px;
+    }
+
+    .navbar li {
+      display: inline-block;
+      margin: 0 16px;
+      color: #015099e7;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .table-info {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    .table-info h2, p {
+      text-align: center;
+    }
+
+    table {
+      width: 600px;
+      margin: auto;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    tr {
+      text-align: center;
+    }
+
+    .first-fact {
+      margin-top: 48px;
+    }
+
+    .first-fact h3 {
+      text-align: center;
+    }
+
+    .first-fact div {
+      margin: 0 auto;
+      width: 600px;
+    }
+
+    .first-fact img {
+      width: 300px;
+      margin: 0 150px;
+    }
+
+    .second-fact {
+      margin-top: 48px;
+    }
+
+    .second-fact h3 {
+      text-align: center;
+    }
+
+    .second-fact div {
+      margin: 0 auto;
+      width: 800px;
+    }
+
+    .second-fact img {
+      width: 300px;
+      margin: 0 250px;
+    }
+
+    .third-fact {
+      margin-top: 48px;
+    }
+
+    .third-fact h3 {
+      text-align: center;
+    }
+
+    .third-fact div {
+      margin: 0 auto;
+      width: 800px;
+    }
+
+    .third-fact img {
+      width: 300px;
+      margin: 0 250px;
+    }
+    
+    aside {
+      width: 200px;
+      background-color: #fff;
+      border-left: 1px solid #2b2a2a;
+      border-bottom: 1px solid #2b2a2a;
+    }
+
+    aside h3 {
+      text-align: center;
+      font-size: 16px;
+    }
+    
+    aside a {
+      color: #015099e7;
+      list-style: none;
+    }
+
+    aside li {
+      margin-bottom: 8px;
+    }
+
+    .video-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    footer {
+      padding: 8px;
+      background-color: #fff;
+    }
+
+  </style>
 </head>
 <body>
   <!--insira os elementos aqui-->
-  <header>
-      <h1>Soco a 80km/h: Conheça o Stomatopoda</h1>
-  </header>
-
-  <nav>
+  <nav class="navbar">
     <ul>
      <a href=""><li>Página Inicial</li></a>
      <a href=""><li>Sobre</li></a>
      <a href=""><li>Contato</li></a>
     </ul>
   </nav>
+
+  <section class="main">
+    <main>  
+        <header>  
+          <h1>Soco a 80km/h: Conheça o Stomatopoda</h1>
+        </header>
+      <section class="table-info">
+        <h2>Informações sobre o Stomatopoda</h2>
+        <p><em>Nome científico: Odontodactylus scyllarus</em></p>
+        <table>
+          <tr>
+            <th>Reino</th>
+            <th>Filo</th>
+            <th>Subfilo</th>
+            <th>Classe</th>
+            <th>Subclasse</th>
+            <th>Ordem</th>
+          </tr>
+          <tr>
+            <td>Animalia</td>
+            <td>Anthropoda</td>
+            <td>Crustacea</td>
+            <td>Malacostraca</td>
+            <td>Hoplocarida</td>
+            <td>Latreille</td>
+          </tr>
+        </table>
+      </section>
+    
+      <article class="first-fact">
+        <h3>Fato engraçado (assustator &#128552)</h3>
+        <div>
+          <p>Um ataque de uma garra de camarão mantis é tão forte que pode quebrar o vidro do aquário.</p>
+          <img src="aquario.png" alt="Stomatopoda quebrando o aquário">
+        </div>
+      </article>
+    
+      <article class="second-fact">
+        <h3>Sobre o comportamento</h3>
+        <div>
+          <p>Os camarões louva-a-deus são altamente inteligentes. Eles reconhecem e se lembram de outras pessoas pela visão e pelo olfato, e demonstram habilidade para aprender. Os animais têm um comportamento social complexo, que inclui lutas ritualizadas e atividades coordenadas entre membros de um par monogâmico. Eles usam padrões fluorescentes para sinalizar uns aos outros e possivelmente a outras espécies.
+          </p>
+          <img src="Stomatopoda.jpg" alt="Stomatopoda">
+        </div>
+      </article>
+    
+      <article class="third-fact">
+        <h3>Stomatopoda Flash</h3>
+        <div>
+          <p>Além da enorme potência de seu soco, esse animal consegue movimentar seus apêndices tal qual um tiro de arma de fogo: seu golpe pode chegar a uma velocidade 720 km/h. Curiosamente, tanto a força quanto rapidez do ataque, não danificam sua estrutura corporal.
+          </p>
+          <img src="stomotapoda_flash.png" alt="Stomatopoda">
+        </div>
+      </article>
+    </main>
+  
+    <aside>
+      <h3>Acesse aqui as referências para a construção dessa página</h3>
+      <ul>
+        <a target="_blank" href="https://theoatmeal.com/comics/mantis_shrimp"><li>The Oatmeal</li></a>
+        <a target="_blank" href="https://mz.figgysfoodtruck.com/2076-mantis-shrimp-facts-stomatopoda.html"><li>Figgy's food truck</li></a>
+        <a target="_blank" href="https://www.aquaa3.com.br/curiosidades-camarao-mantis/#O_animal_mais_rapido_no_gatilho"><li>Aquaa3</li></a>
+      </ul>
+  
+      <div class="video-container">
+        <h3>Vídeo sobre o Stomatopoda</h3>
+        <a target="_blank" href="https://www.youtube.com/watch?v=E0Li1k5hGBE">Vídeo</a>
+      </div>
+    </aside>
+  </section>
+  
+
+  <footer>
+    <p>Conteúdo compilado por <strong>Renan Santiago Ferreira</strong>, 2021</p>
+  </footer>
+
 </body>
 </html>

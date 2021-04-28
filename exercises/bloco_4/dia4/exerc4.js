@@ -61,3 +61,58 @@ function biggerName(names) {
     return bigName;
 }
 console.log(biggerName(['José', 'Lucas', 'Nadia', 'Fernanda', 'Cairo', 'Joana']));
+
+//Exercício 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+function maisRepetido(numeros) {
+    //Armazenar quantas vezes repetiu o número mais repetido
+    let contRepetido = 0;
+    let contNumero = 0;
+    //Armazenar o número mais repetido
+    let indexNumeroRepetido = 0;
+    for (let index in numeros) {
+      let verificaNumero = numeros[index];
+      for (let index2 in numeros) {
+        if (verificaNumero === numeros[index2]) {
+          contNumero += 1;
+        }
+      }
+      if (contNumero > contRepetido) {
+        contRepetido = contNumero;
+        indexNumeroRepetido = index;
+      }
+      contNumero = 0;
+    }
+    return numeros[indexNumeroRepetido];
+  }
+
+  console.log(maisRepetido([2, 3, 2, 5, 8, 2]));
+
+  //Exercício 6 - Crie uma função que receba um número inteiro N e retorne o somatório de todos os números de 1 até N
+  function sum(n) {
+      let nums = [];
+      for (let i = 0; i <= n; i += 1) {
+        nums.push(i);
+      }
+      let total = 0;
+      for (let num in nums) {
+          total = total + nums[num];
+      }
+      return total;
+  }
+
+  console.log(sum(5));
+
+  //Exercício 7 - Crie uma função que receba uma string word e outra string ending . Verifique se a string ending é o final da string word . Considere que a string ending sempre será menor que a string word .
+  function verifyWord(startString, endString) {
+    startString = startString.split('');
+    endString = endString.split('');
+    control = true;
+    for (let i = 0; i < endString.length; i += 1) {
+        if (startString[startString.length - endString.length + i] != endString[i]) {
+            control = false;
+        }
+    }
+    return control;
+  }
+
+  console.log(verifyWord('renan', 'on'));

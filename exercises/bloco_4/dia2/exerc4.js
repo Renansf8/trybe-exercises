@@ -1,11 +1,19 @@
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 //Exercício 1 - percorra o array imprimindo todos os valores nele contidos com a função console.log() 
+// 1 - Declarar o array
+// 2 - Criar um loop para percorer o array
+// 3 - Imprimir o resultado
 for (let num of numbers) {
     console.log(num);
 }
 
 //Exercício 2 - some todos os valores contidos no array e imprima o resultado;
+// 1 - Declarar o array
+// 2 - Declar uma variável que vai conter a soma dos números, com o valor 0
+// 3 - criar um loop que percorra o array
+// 4 - Incrementar a variável com o valor de cada loop
+// 5 - Imprimir o resultado
 let soma = 0;
 for (let index = 0; index < numbers.length; index += 1) {
     soma = soma + numbers[index];
@@ -13,6 +21,12 @@ for (let index = 0; index < numbers.length; index += 1) {
 console.log(soma);
 
 //Exercício 3 - Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array;
+// 1 - Declarar o array
+// 2 - Declarar uma variável que vai contar o resultado, com o valor 0
+// 3 - Criar um loop que vai percorrer o array
+// 4 - Incrementar a variável com o valor de cada loop
+// 5 - Criar uma variável que calcule a media 
+// 6 - Imprimir o resultado da media
 let soma = 0;
 for (let index = 0; index < numbers.length; index += 1) {
     soma = soma + numbers[index];
@@ -21,6 +35,14 @@ let media = soma / numbers.length
 console.log(media);
 
 //Exercício 4 - Com o mesmo código do exercício anterior, caso o valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20";
+// 1 - Declarar o array
+// 2 - Declarar uma variável que vai conter o valor da soma. começando com 0
+// 3 - Criar um loop que percorra o array
+// 4 - Incrementar a váriavel da soma com o valor de cada loop
+// 5 - Criar uma variável que calule a média
+// 6 - Criar uma estrutura de condição
+// 7 - Colocar a primeira condição e imprimir o valor correspondente
+// 8 - Colocar a segunda condição e imprimir o valor correspondente
 let soma = 0;
 for (let index = 0; index < numbers.length; index += 1) {
     soma = soma + numbers[index];

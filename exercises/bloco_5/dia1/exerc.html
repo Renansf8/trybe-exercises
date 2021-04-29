@@ -49,6 +49,22 @@
             document.getElementsByClassName(element)[0].style.backgroundColor = color
         }
         changeCenterColor('center-content', 'white');
+        function changeTextFromH1(text) {
+            document.getElementsByTagName('h1')[0].innerText = text;
+        }
+        changeTextFromH1('Exercício 5.1 - Javascript');
+        function changeTextToUpperCase() {
+            let text = document.querySelector('.center-content p');
+            text.innerText = text.innerText.toUpperCase();
+        }
+        changeTextToUpperCase();
+        function showContent() {
+            let paragraphs = document.getElementsByTagName('p')
+            for (let index = 0; index < paragraphs.length; index += 1) {
+                console.log(paragraphs[index].innerText);
+            }
+        }
+        showContent();
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()

@@ -96,6 +96,15 @@
       createDivMain.appendChild(createSecondH3);
       let createThirdH3 = document.createElement('h3');
       createDivMain.appendChild(createThirdH3);
+      createH1.className = 'title';
+      createH3.className = 'description';
+      createSecondH3.className = 'description';
+      createThirdH3.className = 'description';
+      createDivMain.removeChild(createDivLeft);
+      createDivRight.style.marginRight = 'auto';
+      createDivCenter.style.backgroundColor = 'green';
+      createList.lastElementChild.remove();
+      createList.lastElementChild.remove();
     </script>
   </body>
 </html>

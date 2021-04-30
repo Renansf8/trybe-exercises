@@ -67,6 +67,35 @@
       let createDivCenter = document.createElement('div');
       createDivCenter.className = 'center-content';
       createDivMain.appendChild(createDivCenter);
+      let createP = document.createElement('p');
+      createP.innerText = 'Trabalhando com elementos';
+      createDivCenter.appendChild(createP);
+      let createDivLeft = document.createElement('div');
+      createDivLeft.className = 'left-content';
+      createDivMain.appendChild(createDivLeft);
+      let createDivRight = document.createElement('div');
+      createDivRight.className = 'right-content';
+      createDivMain.appendChild(createDivRight);
+      let createImgLeft = document.createElement('img');
+      createImgLeft.src = 'https://picsum.photos/200';
+      createImgLeft.className = 'small-image';
+      createDivLeft.appendChild(createImgLeft);
+      let createList = document.createElement('ul');
+      createDivRight.appendChild(createList);
+      let array = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      for (let index = 0; index < array.length; index += 1) {
+        let item = array[index];
+
+        let createItemList = document.createElement('li');
+        createItemList.innerText = item;
+        createList.appendChild(createItemList);
+      }
+      let createH3 = document.createElement('h3');
+      createDivMain.appendChild(createH3);
+      let createSecondH3 = document.createElement('h3');
+      createDivMain.appendChild(createSecondH3);
+      let createThirdH3 = document.createElement('h3');
+      createDivMain.appendChild(createThirdH3);
     </script>
   </body>
 </html>

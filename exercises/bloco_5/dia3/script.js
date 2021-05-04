@@ -136,3 +136,10 @@ function taskSelected() {
   const spanContainer = document.querySelector('.my-tasks span');
   spanContainer.className = 'task selected';
 }
+
+//Exercício 10 - Implemente uma função que adiciona um evento que ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
+const day = document.querySelector('#days');
+day.addEventListener('click', function(e) {
+  const colorContainer = document.querySelector('.my-tasks div');
+  e.target.style.color = colorContainer.style.backgroundColor;
+});

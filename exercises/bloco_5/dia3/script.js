@@ -48,3 +48,12 @@ function createDaysOfTheWeek() {
 
   createHolidayButton('Feriados');
   
+  const holidayButton = document.getElementById('btn-holiday');
+  holidayButton.addEventListener('click', changeHolidayColor);
+
+  function changeHolidayColor() {
+    const days = document.querySelectorAll('.holiday');
+    days[0].style.backgroundColor = 'orange';
+    days[1].style.backgroundColor = 'orange';
+    days[2].style.backgroundColor = 'orange';
+  }

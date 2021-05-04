@@ -58,8 +58,6 @@ function changeHolidayColor() {
   days[2].style.backgroundColor = 'orange';
 }
 
-
-
 function createFridayButton(string) {
   const createButtonFriday = document.createElement('button');
   createButtonFriday.id = 'btn-friday';
@@ -80,3 +78,25 @@ function changeFridayText() {
   fridayDays[2].innerText = 'Sexta-feira';
   fridayDays[3].innerText = 'Sexta-feira';
 }
+
+function dayMouseOver() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseover', function(e) {
+    e.target.style.fontSize = '30px';
+    e.target.style.fontWeight = '600';
+  });
+};
+
+dayMouseOver();
+
+function dayMouseOut() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseout', function(e){
+    e.target.style.fontSize = '20px';
+    e.target.style.fontWeight = '200';
+  });
+};
+
+dayMouseOut();

@@ -127,3 +127,12 @@ function createLegend(cor) {
 }
 
 createLegend('red');
+
+//Exercício 9 - Implemente uma função que adiciona um evento que ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected ela estará selecionada.
+const colorContainer = document.querySelector('.my-tasks div');
+colorContainer.addEventListener('click', taskSelected);
+
+function taskSelected() {
+  const spanContainer = document.querySelector('.my-tasks span');
+  spanContainer.className = 'task selected';
+}

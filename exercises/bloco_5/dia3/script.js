@@ -61,7 +61,7 @@ function changeHolidayColor() {
 
 
 function createFridayButton(string) {
-  let createButtonFriday = document.createElement('button');
+  const createButtonFriday = document.createElement('button');
   createButtonFriday.id = 'btn-friday';
   createButtonFriday.innerHTML = string;
   const buttonsContainer = document.querySelector('.buttons-container');
@@ -69,3 +69,14 @@ function createFridayButton(string) {
 };
 
 createFridayButton('Sexta-feira');
+
+const fridayButton = document.getElementById('btn-friday');
+fridayButton.addEventListener('click', changeFridayText);
+
+function changeFridayText() {
+  const fridayDays = document.getElementsByClassName('friday');
+  fridayDays[0].innerText = 'Sexta-feira';
+  fridayDays[1].innerText = 'Sexta-feira';
+  fridayDays[2].innerText = 'Sexta-feira';
+  fridayDays[3].innerText = 'Sexta-feira';
+}

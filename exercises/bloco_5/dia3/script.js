@@ -150,11 +150,25 @@ colorContainer.addEventListener('click', taskSelected);
 function taskSelected() {
   const spanContainer = document.querySelector('.my-tasks span');
   spanContainer.className = 'task selected';
+  spanContainer.style.color = 'red';
 }
 
 //Exercício 10 - Implemente uma função que adiciona um evento que ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
-const day = document.querySelector('#days');
-day.addEventListener('click', function(e) {
-  const colorContainer = document.querySelector('.my-tasks div');
-  e.target.style.color = colorContainer.style.backgroundColor;
-});
+function setDayColor() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let days = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+  
+  days.addEventListener('click', function(event){
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.color;
+      event.target.style.color = color;
+    } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
+    }
+  });
+};
+
+setDayColor();

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let createH1 = document.createElement('h1');
+      createH1.innerText = 'Exercício 5.2 - Javascript DOM'
+      let takeBody = document.querySelector('body');
+      takeBody.appendChild(createH1);
+      let createDivMain = document.createElement('div');
+      createDivMain.className = 'main-content';
+      takeBody.appendChild(createDivMain);
+      let createDivCenter = document.createElement('div');
+      createDivCenter.className = 'center-content';
+      createDivMain.appendChild(createDivCenter);
+      let createP = document.createElement('p');
+      createP.innerText = 'Trabalhando com elementos';
+      createDivCenter.appendChild(createP);
+      let createDivLeft = document.createElement('div');
+      createDivLeft.className = 'left-content';
+      createDivMain.appendChild(createDivLeft);
+      let createDivRight = document.createElement('div');
+      createDivRight.className = 'right-content';
+      createDivMain.appendChild(createDivRight);
+      let createImgLeft = document.createElement('img');
+      createImgLeft.src = 'https://picsum.photos/200';
+      createImgLeft.className = 'small-image';
+      createDivLeft.appendChild(createImgLeft);
+      let createList = document.createElement('ul');
+      createDivRight.appendChild(createList);
+      let array = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      for (let index = 0; index < array.length; index += 1) {
+        let item = array[index];
+
+        let createItemList = document.createElement('li');
+        createItemList.innerText = item;
+        createList.appendChild(createItemList);
+      }
+      let createH3 = document.createElement('h3');
+      createDivMain.appendChild(createH3);
+      let createSecondH3 = document.createElement('h3');
+      createDivMain.appendChild(createSecondH3);
+      let createThirdH3 = document.createElement('h3');
+      createDivMain.appendChild(createThirdH3);
+      createH1.className = 'title';
+      createH3.className = 'description';
+      createSecondH3.className = 'description';
+      createThirdH3.className = 'description';
+      createDivMain.removeChild(createDivLeft);
+      createDivRight.style.marginRight = 'auto';
+      createDivCenter.style.backgroundColor = 'green';
+      createList.lastElementChild.remove();
+      createList.lastElementChild.remove();
+    </script>
+  </body>
+</html>

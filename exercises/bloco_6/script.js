@@ -13,9 +13,3 @@ function setStates() {
 
 setStates();
 
-// let submitButton = document.getElementById('submit-button');
-
-// submitButton.addEventListener('click', function(e) {
-//   e.preventDefault();
-// });
-

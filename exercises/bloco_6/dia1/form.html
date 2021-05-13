@@ -22,56 +22,55 @@
       <legend>Dados Pessoais</legend>
       <div class=''>
         <label for="text-name">Nome:</label>
-        <input type="text" name="name" id="text-name" class='form-control' required>
+        <input type="text" name="name" data-validate-field='name' id="text-name" class='form-control' maxlength="40" required>
       </div>
       <div class=''>
         <label for="text-email">E-mail:</label>
-        <input maxlength="50" type="email" name="email" id="text-email" class='form-control' required>
+        <input type="email" name="email" data-validate-field="email" id="text-email" class='form-control' maxlength="50" required>
       </div>
       <div class=''>
         <label for="text-cpf">CPF:</label>
-        <input maxlength="11" type="text" name="cpf" id="text-cpf" class='form-control' required>
+        <input maxlength="11" type="text" name="cpf" data-validate-field="cpf" id="text-cpf" class='form-control' required>
       </div>
       <div class=''>
         <label for="text-address">Endereço:</label>
-        <input maxlength="200" type="text" name="address" id="text-address" class='form-control' required>
+        <input type="text" name="address" data-validate-field="address" id="text-address" class='form-control' maxlength="200" required>
       </div>
       <div class=''>
         <label for="text-address">Cidade:</label>
-        <input maxlength="28" type="text" name="city" id="city-address" class='form-control' required>
+        <input type="text" name="city" data-validate-field="city" id="city-address" class='form-control' maxlength="20" required>
       </div>
       <div class=''>
         <label for="option-state">Estado</label>
-        <select class='form-select' name="state" id="option-state">
+        <select class='form-select' name="state" data-validate-field="state" id="option-state">
         </select>
       </div>
       <div class='form-check'>
-        <input class='form-check-input' type="radio" name='type' id='house-type' value='house' 
+        <input class='form-check-input' type="radio" name='type' data-validate-field="radio" id='house-type' value='house' 
         checked>Casa
         <label for="house-type"></label>
       </div>
       <div class='form-check'>
-        <input class='form-check-input' type="radio" id="ap-type" name='type' value='ap'>Apartamento
+        <input class='form-check-input' type="radio" id="ap-type" name='type' data-validate-field="radio" value='ap'>Apartamento
         <label for="ap-type"></label>
       </div>
         
-
       <legend>Último emprego</legend>
       <div>
         <label for="abstract-text">Resumo do currículo</label>
-        <textarea name="abstract" id="abstract-text" cols="30" rows="10" maxlength="1000" class='form-control' required></textarea>
+        <textarea name="abstract" data-validate-field="abstract" id="abstract-text" cols="30" rows="10" maxlength="1000" class='form-control' required></textarea>
       </div>
       <div>
         <label for="cargo">Cargo</label>
-        <input name='office' id='cargo' type="text" maxlength="40" class='form-control' required>
+        <input name='office' data-validate-field="office" id='cargo' type="text" maxlength="40" class='form-control' required>
       </div>
       <div>
         <label for="desc-input">Descrição do cargo</label>
-        <textarea name="description" id="desc-input" cols="30" rows="10" class='form-control'></textarea>
+        <textarea name="description" data-validate-field="description" id="desc-input" cols="30" rows="10" class='form-control' maxlength="500" required></textarea>
       </div>
       <div>
         <label for="datepicker">Data de início</label>
-        <input type="text" placeholder="DD/MM/AAAA" name='date' id='datepicker'>
+        <input type="text" placeholder="DD/MM/AAAA" name='date' data-validate-field="date" id='datepicker' required>
       </div>
 
     <button class='btn btn-success' type="submit" id="submit-button">Enviar</button>
@@ -79,6 +78,7 @@
   </form>
   
   <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script src="just-validate.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

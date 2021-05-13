@@ -1,0 +1,11 @@
+div {
+  margin: 8px auto;
+}
+
+.form-control {
+  width: 50%;
+}
+
+.form-select {
+  width: 80px;
+}

@@ -125,6 +125,6 @@ new JustValidate('.js-form', {
     }
   },
   submitHandler: function(form, values) {
-    console.log(form, values)
+    console.log(form, values);
   }
 });

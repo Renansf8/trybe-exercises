@@ -1,0 +1,48 @@
+body {
+  font-size: 18px;
+  margin: 0 16px;
+
+}
+h1 {
+  font-size: 26px;
+}
+h2 {
+
+}
+
+img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+figure {
+    
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: burlywood;
+    font-size: 22px;
+    margin: 50px 150px;
+  }
+
+  .container-images {
+    display: flex;
+    max-width: 800px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .container-images figure {
+    margin: 0 16px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  body {
+    background-color: lightcoral;
+    font-size: 26px;
+    margin: 100px 250px;
+  }
+} 

@@ -1,0 +1,89 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  @media screen and (max-width: 450px) {
+    body {
+      margin: 0 16px;
+      background-color: lightcyan;
+    }
+
+    header p {
+      font-size: 24px;
+      text-align: center;
+      color: mediumpurple;
+      font-weight: bold;
+    }
+
+    header ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header li {
+      font-size: 18px;
+      margin: 4px 0;
+    }
+
+    .aside-one {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .aside-one h2 {
+      margin-bottom: 4px;
+      color: mediumpurple;
+      font-weight: bold;
+    }
+
+    .aside-one li {
+      list-style: none;
+      margin: 2px 0;
+    }
+
+    .aside-two {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .aside-two h2 {
+      margin-bottom: 4px;
+      color: mediumpurple;
+      font-weight: bold;
+    }
+
+    .aside-two li {
+      margin: 2px 0;
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-content h1 {
+      font-size: 20px;
+      margin-bottom: 4px;
+      margin-top: 24px;
+      color: mediumpurple;
+    }
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    footer h3 {
+      margin-bottom: 4px;
+      color: mediumpurple;
+      font-weight: bold;
+    }
+  }

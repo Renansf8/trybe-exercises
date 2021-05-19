@@ -1,3 +1,5 @@
+//Parte 1
+
 const testingScope = (escopo) => {
   if (escopo === true) {
     var ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
@@ -26,3 +28,47 @@ const testingScope = (escopo) => {
   };
 
   console.log(`Os números ${sortedOddsAndEvens()} se encontram ordenados de forma crescente`);
+
+  //Parte 2
+  //Exercício 1
+const fatorial = (number) => {
+  let total = 1;
+  for (let index = number; index != 0; index -= 1) {
+    total *= index;
+  }
+  return total;
+};
+
+console.log(fatorial(6));
+
+//Exercício 2
+const longestWord = phrase => {
+  let splitedPhrase = phrase.split(' ');
+  let longest = '';
+  for (let index = 0; index < splitedPhrase.length; index += 1) {
+    if (splitedPhrase[index].length > longest.length) {
+      longest = splitedPhrase[index];
+    } else if (splitedPhrase[index].length == longest.length) {
+      longest = 'Temos mais de uma palavara do mesmo tamanho :/'
+    }
+  }
+
+  return longest;
+}
+
+console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'));
+
+//Exercício 4
+
+  const changeString = (string) => {
+    let determinedString = 'Tryber x aqui!';
+    let splitedDeterminedString = determinedString.split(' ');
+    for (let index = 0; index < splitedDeterminedString.length; index += 1) {
+      if (splitedDeterminedString[index] === 'x') {
+        splitedDeterminedString[index] = string;
+      }
+    }
+    return splitedDeterminedString.join(' ');
+  };
+
+  console.log(changeString('renan'));

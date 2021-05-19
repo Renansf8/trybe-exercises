@@ -2,14 +2,13 @@
 
 const testingScope = (escopo) => {
   if (escopo === true) {
-    var ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
+    let ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
     ifScope = `${ifScope} ótimo, fui utilizada no escopo !`;
     console.log(ifScope);
   } else {
-    var elseScope = 'Não devo ser utilizada fora meu escopo (else)';
+    let elseScope = 'Não devo ser utilizada fora meu escopo (else)';
     console.log(elseScope);
   }
-  console.log(`${ifScope} o que estou fazendo aqui ? :O`); // Se necessário esta linha pode ser removida.
 }
 
   testingScope(true);
@@ -43,7 +42,7 @@ console.log(fatorial(6));
 
 //Exercício 2
 const longestWord = phrase => {
-  let splitedPhrase = phrase.split(' ');
+  const splitedPhrase = phrase.split(' ');
   let longest = '';
   for (let index = 0; index < splitedPhrase.length; index += 1) {
     if (splitedPhrase[index].length > longest.length) {
@@ -61,8 +60,8 @@ console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu
 //Exercício 4
 
   const changeString = (string) => {
-    let determinedString = 'Tryber x aqui!';
-    let splitedDeterminedString = determinedString.split(' ');
+    const determinedString = 'Tryber x aqui!';
+    const splitedDeterminedString = determinedString.split(' ');
     for (let index = 0; index < splitedDeterminedString.length; index += 1) {
       if (splitedDeterminedString[index] === 'x') {
         splitedDeterminedString[index] = string;

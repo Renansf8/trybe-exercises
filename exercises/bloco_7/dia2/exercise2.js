@@ -1,4 +1,4 @@
-//Exercício 1
+//Parte 2
 
 const lesson1 = {
   materia: 'Matemática',
@@ -20,43 +20,40 @@ const lesson3 = {
   turno: 'noite',
 };
 
-// const addTurn = (object, key, value) => {
-//   object[key] = value;
-// };
+//Exercício 1 - Crie uma função para adicionar o turno manhã na lesson2
+const addTurn = (object, key, value) => {
+  object[key] = value;
+};
 
-// console.log(lesson2);
+addTurn(lesson2, 'turno', 'manhã');
+console.log(lesson2);
 
-// addTurn(lesson2, 'turno', 'manhã');
+//Exercício 2 - Crie uma função para listar as keys de um objeto.
+const listKeys = (object) => {
+  return console.log(Object.keys(object));
+};
 
-// console.log(lesson2);
+listKeys(lesson1);
 
-//Exercício 2
-// const listKeys = (object) => {
-//   return console.log(Object.keys(object));
-// };
+//Exercício 3 - Crie uma função para mostar o tamanho de um objeto
+const lengthObject = (object) => {
+  return console.log(Object.keys(object).length);
+};
 
-// listKeys(lesson1);
+lengthObject(lesson1);
 
-//Exercício 3
-// const lengthObject = (object) => {
-//   return console.log(Object.keys(object).length);
-  
-// };
+//Exercício 4 - Crie uma função para listar os valores de um objeto.
+const listValues = (object) => {
+  console.log(Object.values(object));
+};
 
-// lengthObject(lesson1);
+listValues(lesson3);
 
-//Exercício 4 
-// const listValues = (object) => {
-//   console.log(Object.values(object));
-// };
-
-// listValues(lesson3);
-
-//Exercício 5
+//Exercício 5 - Crie um objeto de nome allLessons, que deve agrupar todas as aulas através do Object.assign. Cada chave desse novo objeto será uma aula, sendo essas chaves: lesson1, lesson2 e lesson3.
 const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
-// console.log(allLessons);
+console.log(allLessons);
 
-//Exercício 6 
+//Exercício 6 - Usando o objeto criado no exercício 5, crie uma função que retorne o número total de estudantes
 const sumStudents = () => {
   const totalStudents = allLessons.lesson1.numeroEstudantes + allLessons.lesson2.numeroEstudantes + allLessons.lesson3.numeroEstudantes;
   return totalStudents;
@@ -64,14 +61,14 @@ const sumStudents = () => {
 
 console.log(sumStudents());
 
-//Exercício 7
+//Exercício 7 - Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto.
 const getValueByNumber = (object, position) => {
   return Object.values(object)[position];
 }
 
-console.log(getValueByNumber(lesson1, 0));
+console.log(getValueByNumber(lesson1, 2));
 
-//Exercício 8
+//Exercício 8 - Crie uma função que verifique se o par (chave / valor) existe na função. Essa função deve possuir três parâmetros, sendo eles: o objeto, o nome da chave e o valor da chave.
 const verifyPair = (object, key, value) => {
   const entries = Object.entries(object);
   for (let entry in entries) {

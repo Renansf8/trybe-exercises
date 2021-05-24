@@ -26,7 +26,6 @@ const addTurn = (object, key, value) => {
 };
 
 addTurn(lesson2, 'turno', 'manhã');
-console.log(lesson2);
 
 //Exercício 2 - Crie uma função para listar as keys de um objeto.
 const listKeys = (object) => {
@@ -81,3 +80,41 @@ const verifyPair = (object, key, value) => {
 };
 
 console.log(verifyPair(lesson1, 'materia', 'Matemática'))
+
+//Parte Bônus
+//Exercício 1 - crie uma função para contar quantos estudantes assistiram às aulas de Matemática.Use o objeto criado no exercício 5.
+const mathStudents = (object) => {
+  let totalMathStudents = 0;
+  const array = Object.keys(object);
+  for ( index in array) {
+    if (object[array[index]].materia === 'Matemática') {
+      totalMathStudents += object[array[index]].numeroEstudantes;
+    }
+  }
+  return totalMathStudents;
+};
+
+console.log(mathStudents(allLessons));
+
+//Exercício 2 - Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes.
+const getInfo = (object, name) => {
+  const allLessons = [];
+  let allStudents = 0;
+  const array = Object.values(object);
+  for (index in array) {
+    if (array[index].professor === name) {
+      allLessons.push(array[index].materia);
+      allStudents += array[index].numeroEstudantes;
+    }
+  }
+  return { aulas: allLessons, estudantes: allStudents };
+};
+
+const createReport = (allLessons, name) => {
+  const report = {};
+  report.professor = name;
+  Object.assign(report, getInfo(allLessons, name));
+  return report;
+};
+
+console.log(createReport(allLessons, 'Maria Clara'));

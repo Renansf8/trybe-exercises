@@ -18,10 +18,11 @@ console.log(theBigger());
 
 //----------------------------------------------------------------------------------------------
 const numbers = [18, 19, 23, 53, 4, 5, 76, 23, 54];
-const evenNumbers = numbers.filter((num) => num % 2 === 0);
-const sumEvenNumbers = evenNumbers.reduce((total, num) => total += num);
+const evenNumbers = numbers
+  .filter((num) => num % 2 === 0)
+  .reduce((total, num) => total += num);
 //------------------------------------------------------------------------------------------------
-const sumEvenNumbersOnlyWithReduce = numbers.reduce((total, num) => (num % 2 === 0) ? total += num : total += 0);
+const sumEvenNumbersOnlyWithReduce = numbers.reduce((total, num) => { return (num % 2 === 0) ? total += num : total += 0 }, 0);
 console.log(sumEvenNumbersOnlyWithReduce);
 
 

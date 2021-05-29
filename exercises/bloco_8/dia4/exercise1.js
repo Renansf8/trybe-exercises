@@ -1,5 +1,6 @@
 //Exercício 1 - Dada uma matriz de matrizes, transforme em uma única matriz.
 const assert = require('assert');
+const { cpuUsage } = require('process');
 
 const arrays = [
   ['1', '2', '3'],

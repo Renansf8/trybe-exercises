@@ -8,6 +8,7 @@
 // })
 
 
+//Usando then e catch
 const promise = new Promise((resolve, reject) => {
   const number = Math.floor(Math.random() * 11);
 

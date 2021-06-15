@@ -13,20 +13,41 @@ describe('Testa a função uppercase', () => {
 
 //Exercício 2 - Utilizando a sintaxe de Promise , faça um teste que verifique o resultado da função getUserName para o caso em que o usuário é encontrado, e também um teste para o caso em que o usuário não é encontrado.
 
+// describe('Caso o ID seja encontrado', () => {
+//   it('Retorna o nome do usuário', () => {
+//     expect.assertions(1);
+//     return getUserName('4').then(name => {
+//       expect(name).toBe('Mark')
+//     });
+//   });
+// })
+
+// describe('Caso o ID não seja encontrado', () => {
+//   it('Retorna um erro', () => {
+//     expect.assertions(1);
+//     return getUserName(1).catch(name => {
+//       expect(name).toEqual()
+//     });
+//   });
+// });
+
+
+//Exercício 3 - Reescreva o teste do exercício anterior, desta vez utilizando a sintaxe de async/await .
+
 describe('Caso o ID seja encontrado', () => {
-  it('Retorna o nome do usuário', () => {
-    expect.assertions(1);
-    return getUserName('4').then(name => {
-      expect(name).toBe('Mark')
-    });
+  it('Retorna o nome do usuário', async () => {
+    const name = await getUserName('4')
+    expect(name).toBe('Mark')
   });
 })
 
 describe('Caso o ID não seja encontrado', () => {
-  it('Retorna um erro', () => {
-    expect.assertions(1);
-    return getUserName(1).catch(name => {
-      expect(name).toEqual({ error: 'User with 1 not found.' })
-    });
+  it('Retorna um erro', async () => {
+    try {
+      await getUserName(1);
+    } catch (error) {
+      expect(error).toEqual({ error: 'User with 1 not found.' })
+    }
   });
 });
+

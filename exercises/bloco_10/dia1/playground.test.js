@@ -1,6 +1,7 @@
-const { compareTrue, calcArea } = require('./playground');
+const { compareTrue, calcArea, encode, decode } = require('./playground');
 const { test, expect, describe } = require('@jest/globals');
 
+//
 describe('Playground functions', () => {
   test('compare two values', () => {
     expect(compareTrue(1, 1)).toBe(true);
@@ -13,3 +14,10 @@ describe('Playground functions', () => {
   });
 });
 
+//Exercício 3 - Teste se encode e decode são funções;
+describe('function endocde and decode', () => {
+  test('verity type of functions', () => {
+    expect(typeof encode).toBe('function');
+    expect(typeof decode).toBe('function');
+  });
+}); 

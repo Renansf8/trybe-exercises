@@ -15,9 +15,21 @@ describe('Playground functions', () => {
 });
 
 //Exercício 3 - Teste se encode e decode são funções;
-describe('function endocde and decode', () => {
-  test('verity type of functions', () => {
+describe('function encode and decode', () => {
+  test('verify type of functions', () => {
     expect(typeof encode).toBe('function');
     expect(typeof decode).toBe('function');
+  });
+
+  test('return of encode', () => {
+    expect(encode('aeiou')).toBe('12345');
+  });
+
+  test('return of decode', () => {
+    expect(decode('12345')).toBe('aeiou');
+  });
+
+  test('lentgh of return', () => {
+    expect(encode('renan').length).toBe(5);
   });
 }); 

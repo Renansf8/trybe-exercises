@@ -109,55 +109,88 @@ function compareTrue(value1, value2) {
 //   console.log(fizzBuzz([9, 25]));
   
   // Desafio 9
-  function encode(string) {
-    let splitedString = string.split('');
-    let encodeName = [];
-    for (let letter in splitedString) {
-      if (splitedString[letter] === 'a') {
-        splitedString[letter] = '1';
-      }
-      else if (splitedString[letter] === 'e') {
-        splitedString[letter] = '2';
-      }
-      else if (splitedString[letter] === 'i') {
-        splitedString[letter] = '3';
-      }
-      else if (splitedString[letter] === 'o') {
-        splitedString[letter] = '4';
-      }
-      else if (splitedString[letter] === 'u') {
-        splitedString[letter] = '5';
-      }
-      encodeName.push(splitedString[letter])
-    };
-    return encodeName.join('');
+  // function encode(string) {
+  //   let splitedString = string.split('');
+  //   let encodeName = [];
+  //   for (let letter in splitedString) {
+  //     if (splitedString[letter] === 'a') {
+  //       splitedString[letter] = '1';
+  //     }
+  //     else if (splitedString[letter] === 'e') {
+  //       splitedString[letter] = '2';
+  //     }
+  //     else if (splitedString[letter] === 'i') {
+  //       splitedString[letter] = '3';
+  //     }
+  //     else if (splitedString[letter] === 'o') {
+  //       splitedString[letter] = '4';
+  //     }
+  //     else if (splitedString[letter] === 'u') {
+  //       splitedString[letter] = '5';
+  //     }
+  //     encodeName.push(splitedString[letter])
+  //   };
+  //   return encodeName.join('');
+  // };
+  
+  // console.log(encode('aeiou'));
+
+  const mapString = (objectMap, string) => {
+    const splitedString = string.split('');
+    const mappedArray = splitedString.map((character) => {
+      if(objectMap[character]) return objectMap[character]
+      return character
+    });
+    return mappedArray.join('');
+  };
+
+  const encode = (string) => {
+    const map = {
+      a: 1,
+      e: 2,
+      i: 3,
+      o: 4,
+      u: 5,
+    }
+    return mapString(map, string);
+  };
+
+  // console.log(encode('aeiou'));
+
+  const decode = (string) => {
+    const map = {
+      1: 'a',
+      2: 'e',
+      3: 'i',
+      4: 'o',
+      5: 'u',
+    }
+    return mapString(map, string);
   };
   
-//   console.log(encode('hi there!'));
-  
-  function decode(string) {
-    let splitedString = string.split('');
-    let encodeName = [];
-    for (let letter in splitedString) {
-      if (splitedString[letter] === '1') {
-        splitedString[letter] = 'a';
-      }
-      else if (splitedString[letter] === '2') {
-        splitedString[letter] = 'e';
-      }
-      else if (splitedString[letter] === '3') {
-        splitedString[letter] = 'i';
-      }
-      else if (splitedString[letter] === '4') {
-        splitedString[letter] = 'o';
-      }
-      else if (splitedString[letter] === '5') {
-        splitedString[letter] = 'u';
-      }
-      encodeName.push(splitedString[letter])
-    };
-    return encodeName.join('');
-  };
+  // function decode(string) {
+  //   let splitedString = string.split('');
+  //   let encodeName = [];
+  //   for (let letter in splitedString) {
+  //     if (splitedString[letter] === '1') {
+  //       splitedString[letter] = 'a';
+  //     }
+  //     else if (splitedString[letter] === '2') {
+  //       splitedString[letter] = 'e';
+  //     }
+  //     else if (splitedString[letter] === '3') {
+  //       splitedString[letter] = 'i';
+  //     }
+  //     else if (splitedString[letter] === '4') {
+  //       splitedString[letter] = 'o';
+  //     }
+  //     else if (splitedString[letter] === '5') {
+  //       splitedString[letter] = 'u';
+  //     }
+  //     encodeName.push(splitedString[letter])
+  //   };
+  //   return encodeName.join('');
+  // };
   
 //   console.log(decode('h3 th2r2!'));
   

@@ -8,16 +8,15 @@ const appointments = [
   'Voltar as atividade normais'
 ];
 
-const Task = (appointments) => {
+const Task = (appointment) => {
   return (
-    appointments.map((appointment) => <li>{appointment}</li>
-    )
+    <li>{appointment}</li>
   );
 }
 
 function App() {
   return (
-    Task(appointments)
+    <ul>{appointments.map((appointment) => Task(appointment))}</ul>
   );
 }
 

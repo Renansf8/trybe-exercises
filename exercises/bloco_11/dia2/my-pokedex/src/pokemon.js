@@ -12,7 +12,7 @@ class ListPokemons extends Component {
           <p>{this.props.pokemon.averageWeight.value} {this.props.pokemon.averageWeight.measurementUnit}</p>
         </div>
         <div>
-          <img src={this.props.pokemon.image}/>
+          <img src={this.props.pokemon.image} alt='pokemon'/>
         </div>
       </div>
     );
@@ -20,11 +20,15 @@ class ListPokemons extends Component {
 }
 
 ListPokemons.propTypes = {
-  name: PropTypes.string,
-  type: PropTypes.string,
-  value: PropTypes.number,
-  measurementUnit: PropTypes.string,
-  image: PropTypes.string
-}
+  pokemon: PropTypes.shape({
+    name: PropTypes.string,
+    type: PropTypes.string,
+    averageWeight: PropTypes.shape({
+      measurementUnit: PropTypes.string,
+      value: PropTypes.number
+    }),
+    image: PropTypes.string,
+  }).isRequired,
+};
 
 export default ListPokemons;

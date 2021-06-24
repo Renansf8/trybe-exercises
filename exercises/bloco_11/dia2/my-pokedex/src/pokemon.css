@@ -1,0 +1,9 @@
+.pokemon-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid #555555;
+  width: 400px;
+  margin: 16px auto;
+  border-radius: 8px;
+}

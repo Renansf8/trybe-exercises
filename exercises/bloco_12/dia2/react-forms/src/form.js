@@ -1,4 +1,5 @@
 import React from 'react';
+import EstadoFavorito from './EstadoFavorito';
 
 class Form extends React.Component {
   constructor() {
@@ -30,13 +31,8 @@ class Form extends React.Component {
     return (
       <div>
         <form>
-          <label>
-            <textarea 
-              name='estadoFavorito'
-              onChange={this.handleChange}
-              value={this.state.estadoFavorito}
-            />
-          </label>
+          <EstadoFavorito value={this.state.estadoFavorito} handleChange={this.handleChange}/>
+
           <label>
             <input 
               name='email'

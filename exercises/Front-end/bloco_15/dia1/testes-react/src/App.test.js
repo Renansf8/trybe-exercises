@@ -1,27 +1,27 @@
 import { render, fireEvent } from '@testing-library/react';
 import App from './App';
 
-// test('Verifica se tem uma label com o texto Email', () => {
-//   const { getByLabelText } = render(<App />);
-//   const inputEmail = getByLabelText('Email');
-//   //toBeInTheDocument() é um 'custom jest matchers' fornecido pela importação la no setupTest.js
-//   expect(inputEmail).toBeInTheDocument();
-//   expect(inputEmail.type).toBe('email');
-// });
+test('Verifica se tem uma label com o texto Email', () => {
+  const { getByLabelText } = render(<App />);
+  const inputEmail = getByLabelText('Email');
+  //toBeInTheDocument() é um 'custom jest matchers' fornecido pela importação la no setupTest.js
+  expect(inputEmail).toBeInTheDocument();
+  expect(inputEmail.type).toBe('email');
+});
 
-// test('Verifica se existe um botão de enviar', () => {
-//   const { getByTestId } = render(<App />);
-//   const btn = getByTestId('id-send');
-//   expect(btn).toBeInTheDocument();
-//   expect(btn.type).toBe('button');
-//   expect(btn).toHaveValue('Enviar');
-// })
+test('Verifica se existe um botão de enviar', () => {
+  const { getByTestId } = render(<App />);
+  const btn = getByTestId('id-send');
+  expect(btn).toBeInTheDocument();
+  expect(btn.type).toBe('button');
+  expect(btn).toHaveValue('Enviar');
+})
 
-// test('Verificando se exite dois botões', () => {
-//   const { getAllByRole } = render(<App />);
-//   const btn = getAllByRole('button');
-//   expect(btn.length).toBe(2);
-// })
+test('Verificando se exite dois botões', () => {
+  const { getAllByRole } = render(<App />);
+  const btn = getAllByRole('button');
+  expect(btn.length).toBe(2);
+})
 
 test('Verifica se o botão e o campo email estão funcionando', () => {
   const { getByTestId, getByLabelText} = render(<App />);

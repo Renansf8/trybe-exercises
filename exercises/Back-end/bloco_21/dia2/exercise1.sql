@@ -1,3 +1,5 @@
+-- Utilizando o INNER JOIN , encontre as vendas nacionais ( domestic_sales ) e internacionais ( international_sales ) de cada filme.
+
 SELECT * FROM Pixar.BoxOffice;
 SELECT * FROM Pixar.Movies;
 SELECT m.title, b.domestic_sales, b.international_sales 

@@ -1,3 +1,5 @@
+-- Faça duas buscas, uma utilizando SUBQUERY e outra utilizando INNER JOIN , que retornem as avaliações dos filmes lançados depois de 2009.
+
 SELECT * FROM Pixar.Movies;
 SELECT rating 
 FROM Pixar.BoxOffice 

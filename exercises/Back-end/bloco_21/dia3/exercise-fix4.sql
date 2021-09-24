@@ -17,5 +17,3 @@ END $$
 DELIMITER ;
     
 SELECT TotalPayments(2);
-
-18:39:49	SELECT TotalPayments(2) LIMIT 0, 1000	Error Code: 1305. FUNCTION sakila.TotalPayments does not exist	0,0011 sec

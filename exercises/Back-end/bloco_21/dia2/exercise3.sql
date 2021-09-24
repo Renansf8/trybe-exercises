@@ -1,3 +1,5 @@
+-- Utilizando o INNER JOIN , faça uma busca que retorne os filmes e sua avaliação ( rating ) em ordem decrescente.
+
 SELECT * FROM Pixar.BoxOffice;
 SELECT * FROM Pixar.Movies;
 SELECT m.title, r.rating 

@@ -1,0 +1,26 @@
+use bios;
+// Exerc 1
+db.bios.find(
+    {_id: 8}
+)
+// Exerc 2
+db.bios.find(
+    {_id: 8},
+    {name: 1}
+)
+// Exerc 3
+db.bios.find(
+    {_id: 8},
+    {_id: 0, name: 1, birth: 1}
+)
+// Exerc 4
+db.bios.find(
+    {"name.first": "John"},
+).pretty();
+// Exerc 5
+db.bios.find().limit(3).pretty();
+// Exerc 6
+db.bios.find().limit(2).skip(5);
+// Exerc 7
+db.bios.find().limit(2).skip(5);
+

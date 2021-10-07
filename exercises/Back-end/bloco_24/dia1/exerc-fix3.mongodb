@@ -1,0 +1,35 @@
+db.transactions.aggregate([
+    {
+        $group: {
+            _id: "$bank",
+            totalValue: { $sum: '$value' },
+            transactions: { $sum: 1 }
+        }
+    }
+])
+
+db.transactions.aggregate([
+    {
+        $group: {
+            _id: "$bank",
+            totalValue: { $sum: '$value' },
+        }
+    }
+])
+
+db.transactions.aggregate([
+    {
+        $group: {
+            _id: "$bank",
+            totalValue: { $sum: '$value' },
+        }
+    },
+    {
+        $match: { "totalValue": { $gt: 1000 }}
+    }
+])
+
+
+
+
+db.transactions.find()

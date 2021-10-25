@@ -2,7 +2,7 @@
 
 const fs = require('fs').promises;
 
-const file = './simpsons.json';
+const file = './simpsdons.json';
 
   // fs.readFile(file).then((content) => {
   //   return JSON.parse(content)
@@ -14,13 +14,17 @@ const file = './simpsons.json';
 
 
   const read = async () => {
-    const readFiles = await fs.readFile(file);
-    const response = await JSON.parse(readFiles);
-    const result = response.map(({id, name}) => {
-      return `${id} - ${name}`
-    })
-    const stringResult = result.forEach((string) => console.log(string))
-    return stringResult
+    try {
+      const readFiles = await fs.readFile(file);
+      const response = await JSON.parse(readFiles);
+      const result = response.map(({id, name}) => {
+        return `${id} - ${name}`
+      })
+      const stringResult = result.forEach((string) => console.log(string))
+      return stringResult
+    } catch(err) {
+      throw new Error('deu ruim!')
+    }
   }
 
   read()

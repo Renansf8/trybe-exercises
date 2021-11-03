@@ -41,7 +41,7 @@ app.post('/greetings', (req, res) => {
 // Sua rota deve retornar o seguinte JSON: { "message": "Seu nome é <name> e você tem <age> anos de idade" }.
 
 app.put('/users/:name/:age', (req, res) => {
-  const { name, age } = req.body;
+  const { name, age } = req.params;
 
   return res.status(200).json({ message: `Seu nome é ${name} e você tem ${age} anos de idade`})
 })

@@ -44,13 +44,13 @@ const createAddress = async ({ cep, logradouro, bairro, localidade, uf}) => {
   return Cep.createAddress({ cep, logradouro, bairro, localidade, uf});
 };
 
-const updateAddress = async ({ cep, logradouro, bairro, localidade, uf}) => {
-  return Cep.updateAddress(cep, logradouro, bairro, localidade, uf)
-};
+// const updateAddress = async ({ cep, logradouro, bairro, localidade, uf}) => {
+//   return Cep.updateAddress(cep, logradouro, bairro, localidade, uf)
+// };
 
 module.exports = {
   findAddressByCep,
   getAllCeps,
   createAddress,
-  updateAddress
+  // updateAddress
 };

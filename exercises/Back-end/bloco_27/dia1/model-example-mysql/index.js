@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const PORT = 3000;
 const Author = require('./models/Author');
 const Books = require('./models/Book');
 
@@ -57,5 +57,22 @@ app.post('/books', async (req, res) => {
   return res.status(201).json({ message: 'Book created!'})
 })
 
-app.listen(port, () => console.log('Server started'));
+app.put('/authors/:id', async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    const found = Author.findById(id);
+    if (!found) {
+      return res.status(404).end();
+    }
+    const { firstName, lastName } = req.body;
+
+    const updated = await Author.updateAuthor({ found, firstName, lastName })
+
+    return res.status(200).json(updated)
+  }catch(err) {
+    next(err);
+  }
+});
+
+app.listen(PORT, () => console.log('Server started'));
 

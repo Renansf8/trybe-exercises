@@ -73,12 +73,16 @@ const findById = async (id) => {
   return getNewAuthor({ id, firstName , middleName, lastName })
 }
 
-const isValid = (firstName, middleName, lastName) => {
-  if (!firstName || typeof firstName !== 'string') return false;
-  if (!lastName || typeof lastName !== 'string') return false;
+const findByName = async (firstName, middleName, lastName) => {
+  const query = middleName ? {firstName, middleName, lastName} : {firstName, lastName}
 
-  return true;
+  const author = await connection().then((db) => db.collection('authors').findOne(query));
+
+  if (!author) return null;
+
+  return getNewAuthor(author);
 };
+
 
 // Cria um novo autor com SQL
 // const createAuthor = async (firstName, middleName, lastName) => {
@@ -90,21 +94,9 @@ const createAuthor = async (firstName, middleName, lastName) => {
     .then((db) => db.collection('authors').insertOne({ firstName, middleName, lastName}))
 }
 
-const updateAuthor = async (author) => {
-  const { _id, ...authorWithoutId} = author;
-
-  await (await connection()).collection('authors').updateOne(
-    { _id: ObjectId(_id)},
-    {
-      $set: authorWithoutId
-    }
-  )
-};
-
 module.exports = {
   getAll,
   findById,
   createAuthor,
-  isValid,
-  updateAuthor
+  findByName
 }
